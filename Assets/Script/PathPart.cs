@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PathPart : MonoBehaviour
 {
@@ -69,5 +70,31 @@ public class PathPart : MonoBehaviour
             Debug.Log("Light Pos Count: " + childLength);
         }
 
+    }
+
+    public void InstallRoadSign(GameObject[] roadsignAssets){
+        //counts the child on roadSignPos and installs road sign
+        if((roadsignAssets.Length!=0) && roadSignPos){
+            Debug.Log("Got RoadSign Asset");
+
+            //Transform lightsUnit;
+            Vector3 roadsignUnitPos;
+            Vector3 roadsignUnitRot;
+
+            int childLength = streetLightPos.transform.childCount;
+            int roadSignLength = roadsignAssets.Length;
+
+            for(int i = 0; i < childLength; i++){
+                roadsignUnitPos = roadSignPos.transform.GetChild(i).position;
+                roadsignUnitRot = roadSignPos.transform.GetChild(i).eulerAngles;
+                
+                Instantiate(roadsignAssets[Random.Range(0, roadSignLength)], roadsignUnitPos, Quaternion.Euler(roadsignUnitRot));
+
+                //lightsAsset.transform.SetParent(streetLightGroup.transform);
+            }
+        }
+        else{
+
+        }
     }
 }

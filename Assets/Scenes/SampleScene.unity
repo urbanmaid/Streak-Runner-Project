@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.14509805, g: 0.22745098, b: 0.32941177, a: 1}
+  m_FogColor: {r: 0.09411765, g: 0.2, b: 0.32941177, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.02
   m_LinearFogStart: 0
@@ -27,7 +27,7 @@ RenderSettings:
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 84832c17c25bae3429658709ba1930b9, type: 2}
-  m_HaloStrength: 0.524
+  m_HaloStrength: 0.257
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0039711036, g: 0.007480601, b: 0.016801434, a: 1}
+  m_IndirectSpecularColor: {r: 0.0018854513, g: 0.003707701, b: 0.009714834, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 45f6a1896dfba654c999fe9a54a03dd9, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: fd8c463289839af4c9c25c5a47b55b65, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -397,8 +397,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  far clip plane: 400
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -424,7 +424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3, z: -2.61}
+  m_LocalPosition: {x: 0, y: 1.1, z: -1.869}
   m_LocalScale: {x: 0.6666667, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -572,7 +572,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
