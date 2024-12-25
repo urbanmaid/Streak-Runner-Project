@@ -1,0 +1,27 @@
+            // pathParts에서 랜덤으로 하나를 선택 (조건 포함)
+            GameObject part = pathParts[Random.Range(0, pathParts.Length)];
+
+            // 부품을 인스턴스화
+            path = part.GetComponent<PathPart>();
+
+            // 부품을 인스턴스화하기: 인스턴스 위치와 각도는 각각 nextPPLoc, nextPPRot으로 지정
+            GameObject trackPart = Instantiate(part, nextPPLoc, Quaternion.Euler(nextPPRot));
+
+            // trackPart의 nextPathPoint를 가져옵니다.
+            PathPart pathInfo = trackPart.GetComponent<PathPart>();
+
+            // 다음 위치와 회전을 업데이트: nextPathPoint의 월드 위치와 회전 사용
+            nextPPLoc = pathInfo.nextPathPoint.transform.position; // 월드 위치로 업데이트
+            nextPPRot = pathInfo.nextPathPoint.transform.eulerAngles; // 월드 회전으로 업데이트
+
+            // 트랙 길이 계산하기
+            trackLengthCur += pathInfo.pathLength;
+            trackTypeCur = path.pathType;
+
+            Debug.Log("Path Name: " + path.name
+                + ", L: " + trackLengthCur
+                + ", T: " + path.pathType
+                //+ ", \tStartPoint Location and Rotation: ("
+                //+ nextPPLoc + "\t), ("
+                //+ nextPPRot + ")"
+                ); // 로그 남기기용, 실제화 시 미사용예정임
