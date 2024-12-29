@@ -62,9 +62,14 @@
     <Analyzer Include="C:\Users\ocr\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.5\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\VehicleSystemFree\Scripts\VehicleFree.cs" />
+    <Compile Include="Assets\VehicleSystemFree\Scenes\Script\DestroyObjectFree.cs" />
     <Compile Include="Assets\Script\PathPart.cs" />
     <Compile Include="Assets\Script\CarController.cs" />
     <Compile Include="Assets\Script\TrackGenerator.cs" />
+    <Compile Include="Assets\Script\VehicleControllerBase.cs" />
+    <Compile Include="Assets\Script\VehicleSuspension.cs" />
+    <Compile Include="Assets\Script\VehicleWheel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Script\dummy1.txt" />
